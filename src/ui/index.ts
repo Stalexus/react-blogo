@@ -1,5 +1,5 @@
-import {fonts} from './fonts'
+import {typography} from './typography'
 import {Media} from './media'
 import { GlobalStyle } from './GlobalStyles'
 
-export {fonts, Media, GlobalStyle}
+export {typography, Media, GlobalStyle}

@@ -4,10 +4,10 @@ import { Nav } from '../Nav'
 
 export const MainTemplate = () => {
     return (
-        <div>
+        <>
             <Nav />
             <Outlet />
             <Footer />
-        </div>
+        </>
     )
 }

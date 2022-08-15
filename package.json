@@ -9,8 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.48",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-select": "^5.0.1",
     "@types/styled-components": "^5.1.26",
@@ -51,6 +49,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "gh-pages": "^4.0.0"
   }
 }

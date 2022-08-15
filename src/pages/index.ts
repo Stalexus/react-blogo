@@ -1,7 +1,7 @@
-import {Home} from './Home'
-import {Content} from './Content'
-import {Serach} from './Search'
-import { SignIn } from './SignIn'
-import {NotFound} from './NotFound'
+import {Home} from './Home/Home'
+import {Content} from './Content/Content'
+import {Serach} from './Search/Search'
+import { SignIn } from './SignIn/SignIn'
+import {NotFound} from './NotFound/NotFound'
 
 export {Home, Content, Serach, SignIn, NotFound}
