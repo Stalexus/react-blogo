@@ -1,5 +1,5 @@
-export const Serach = () => {
+export const Search = () => {
   return (
-    <div>Serach</div>
+    <div>Search</div>
   )
 }

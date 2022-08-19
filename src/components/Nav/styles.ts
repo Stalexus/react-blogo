@@ -10,9 +10,12 @@ export const StyledNav = styled.div`
     align-items: center;
 `;
 
-export const Wrapper = styled.div`
+export const HomeBtn = styled.button`
     grid-area: 1 / 2 / 2 / 4;
     padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 `;
 
 export const SearchBtn = styled.button`
@@ -25,5 +28,5 @@ export const SearchBtn = styled.button`
 export const Authorization = styled.div`
     grid-area: 1 / 10 / 2 / 12;
     text-align: center;
-    ${typography.s1}
+    ${typography.S1}
 `;

@@ -2,6 +2,11 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <footer>Footer</footer>
+    //<FooterWrapper>
+    //  <Line />
+     // <Description>©2022 Blogolog</Description>
+    //  <Theme />
+      <div></div>
+  //  </FooterWrapper>
   )
 }

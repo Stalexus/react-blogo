@@ -1,11 +1,11 @@
-import { ReactComponent as Logo } from "../../assets/logo.svg"
-import { ReactComponent as Мagnifier } from "../../assets/search.svg"
-import { Authorization, SearchBtn, StyledNav, Wrapper } from "./styles"
+import { Logo } from "../../assets"
+import { Мagnifier } from "../../assets"
+import { Authorization, HomeBtn, SearchBtn, StyledNav } from "./styles"
 
 export const Nav = () => {
   return (
     <StyledNav>
-      <Wrapper><Logo /></Wrapper>
+      <HomeBtn><Logo /></HomeBtn>
       <SearchBtn><Мagnifier /></SearchBtn>
       <Authorization>Artem Malkin</Authorization>
     </StyledNav>

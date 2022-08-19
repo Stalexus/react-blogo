@@ -2,5 +2,5 @@ import styled from "styled-components"
 import { typography } from "../../ui";
 
 export const StyledTitle = styled.h2`
-    ${typography.h1}
+    ${typography.H1}
 `;

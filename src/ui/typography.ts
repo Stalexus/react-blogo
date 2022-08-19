@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 import { Media } from "./media";
 
-const h1 = css`
+const H1 = css`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -15,7 +15,7 @@ const h1 = css`
   }
 `;
 
-const h2 = css`
+const H2 = css`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -29,7 +29,7 @@ const h2 = css`
   }
 `;
 
-const h3 = css`
+const H3 = css`
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -37,15 +37,15 @@ const h3 = css`
   line-height: 28px;
 `;
 
-const s1 = css`
+const S1 = css`
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 `;
 
-const b1 = css`
+const B1 = css`
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -53,4 +53,4 @@ const b1 = css`
   line-height: 20px;
 `;
 
-export const typography = { h1, h2, h3, s1, b1 };
+export const typography = { H1, H2, H3, S1, B1 };

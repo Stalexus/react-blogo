@@ -11,13 +11,13 @@ class BlogAPI {
         baseURL: this.BASE_URL
     });
     public getArticles = async () => {
-        const response = await axios.get(this.BASE_URL + Endpoint.ARTICLES)
-        return response.data
+        const { data } = await this.API.get(Endpoint.ARTICLES)
+        return data
     }
     public getBlogs = async () => {
-        const response = await axios.get(this.BASE_URL + Endpoint.NEWS);
-        return response.data;
+        const { data } = await this.API.get(Endpoint.NEWS);
+        return data;
     };
 }
 
-export const newsAPI = new BlogAPI();
+export const blogAPI = new BlogAPI();
