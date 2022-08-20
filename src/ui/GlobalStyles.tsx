@@ -9,5 +9,9 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: 'Inter', 'sans-serif';
+    outline:0;
+  }
+  #root{
+    margin:0 auto;
   }
 `
