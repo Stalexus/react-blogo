@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { typography } from "../../ui";
+import { NavLink } from "react-router-dom";
 
 export const StyledNav = styled.div`
     display: grid;
@@ -10,19 +11,13 @@ export const StyledNav = styled.div`
     align-items: center;
 `;
 
-export const HomeBtn = styled.button`
+export const NavBarHomeLink = styled(NavLink)`
     grid-area: 1 / 2 / 2 / 4;
     padding: 5px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
 `;
 
-export const SearchBtn = styled.button`
+export const NavBarSearchLink = styled(NavLink)`
     grid-area: 1 / 9 / 2 / 10;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
 `;
 
 export const Authorization = styled.div`
