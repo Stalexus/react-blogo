@@ -7,8 +7,8 @@ export const Home = () => {
     <StyledHome>
       <Title text='Blog' />
       <LinkContainer>
-        <NavLink to="articles">Articles</NavLink>
-        <NavLink to="blogs">News</NavLink>
+        <NavLink to=''>Articles</NavLink>
+        <NavLink to=''>News</NavLink>
       </LinkContainer>
     </StyledHome>
   )

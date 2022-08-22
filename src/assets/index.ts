@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from "../assets/logo.svg"
-import { ReactComponent as Мagnifier } from "../assets/search.svg"
+import { ReactComponent as Logo } from "./logo.svg"
+import { ReactComponent as Мagnifier } from "./search.svg"
 
-export {Logo, Мagnifier}
+export { Logo, Мagnifier }

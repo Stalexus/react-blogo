@@ -4,6 +4,4 @@ export enum ROUTE {
     CONTENT = 'content',
     SIGN_IN = 'sign-in',
     NOT_FOUND = '*',
-    ARTICLES = 'articles',
-    NEWS = 'blogs',
 }
