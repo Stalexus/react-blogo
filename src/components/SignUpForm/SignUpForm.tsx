@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ROUTE } from '../../router/routes';
 import PacmanLoader from "react-spinners/ClipLoader";
 import { getFireBaseMessageError } from '../../utils/firebase-error'
-import { SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
+import { LoginButton, PasswordLink, SignInLink, SignInText, SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
 
 type SignUpFormValues = {
     email: string;
@@ -57,13 +57,13 @@ export const SignUpForm = () => {
             </SignUpLabel>
             {errors.password && <span>{errors.password.message}</span>}
             {errorMessage && <span>{errorMessage}</span>}
-            <p>Forgot password?</p>
-            <button type='submit'>
+            <PasswordLink to={ROUTE.RESTORE_PASSWORD}>Forgot password?</PasswordLink>
+            <LoginButton type='submit'>
                 {isLoading ? <PacmanLoader /> : 'Sign Up'}
-            </button>
-            <p>You already have an account {' '}
-                <Link to={ROUTE.SIGN_IN} />
-            </p>
+            </LoginButton>
+            <SignInText>You already have an account {' '}
+                <SignInLink to={ROUTE.SIGN_IN}>Sign In</SignInLink>
+            </SignInText>
         </SignUpStyled>
     )
 };

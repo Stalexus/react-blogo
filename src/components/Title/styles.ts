@@ -3,5 +3,5 @@ import { typography } from "../../ui";
 
 export const StyledTitle = styled.h1`
     padding: 10px;
-    ${typography.H1}
+    ${typography.H1};
 `;
