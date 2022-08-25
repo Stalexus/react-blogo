@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components"
-import { typography } from "../../ui";
+import { Media, typography } from "../../ui";
 import { Color } from "../../ui/colors";
 
 export const SignUpStyled = styled.form`
     max-width: 800px;
     margin: auto;
-    gap: 35px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     justyfy-content: center;
@@ -21,6 +21,15 @@ export const SignUpEmailInput = styled.input`
     font-size: 17px;
     border: 1px solid rgba(49, 48, 55, 0.1);
     border-radius: 4px;
+    ${Media.LG}{
+        width: 400px;
+    }
+    ${Media.MD}{
+        width: 300px;
+    }
+    ${Media.SM}{
+        width: 200px;
+    }
 `;
 
 export const SignUpPasswordInput = styled(SignUpEmailInput)`
@@ -40,6 +49,15 @@ export const PasswordLink = styled(NavLink)`
     :hover {
         color: ${Color.Violet};
     }
+    ${Media.LG}{
+        width: 400px;
+    }
+    ${Media.MD}{
+        width: 300px;
+    }
+    ${Media.SM}{
+        width: 200px;
+    }
 `;
 
 export const LoginButton = styled.button`
@@ -47,8 +65,18 @@ export const LoginButton = styled.button`
     height: 56px;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
     background-color: ${Color.Primary};
     color: ${Color.White};
+    ${Media.LG}{
+        width: 400px;
+    }
+    ${Media.MD}{
+        width: 300px;
+    }
+    ${Media.SM}{
+        width: 200px;
+    }
 `;
 
 export const SignInText = styled.p`
@@ -60,4 +88,8 @@ export const SignInLink = styled(NavLink)`
     pading: 5px;
     text-decoration: none;
     color: ${Color.Violet};
+`;
+
+export const ErrorMessage = styled.span`
+    color: ${Color.Red};
 `;

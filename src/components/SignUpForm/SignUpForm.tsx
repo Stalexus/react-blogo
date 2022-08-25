@@ -1,11 +1,10 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom';
 import { ROUTE } from '../../router/routes';
 import PacmanLoader from "react-spinners/ClipLoader";
 import { getFireBaseMessageError } from '../../utils/firebase-error'
-import { LoginButton, PasswordLink, SignInLink, SignInText, SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
+import { ErrorMessage, LoginButton, PasswordLink, SignInLink, SignInText, SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
 
 type SignUpFormValues = {
     email: string;
@@ -44,7 +43,7 @@ export const SignUpForm = () => {
                     pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                 })} />
             </SignUpLabel>
-            {errors.email && <span>{errors.email.message}</span>}
+            {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
             <SignUpLabel>
                 Password
                 <SignUpPasswordInput type="password" {...register('password', {
@@ -55,8 +54,8 @@ export const SignUpForm = () => {
                     }
                 })} />
             </SignUpLabel>
-            {errors.password && <span>{errors.password.message}</span>}
-            {errorMessage && <span>{errorMessage}</span>}
+            {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
+            {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
             <PasswordLink to={ROUTE.RESTORE_PASSWORD}>Forgot password?</PasswordLink>
             <LoginButton type='submit'>
                 {isLoading ? <PacmanLoader /> : 'Sign Up'}
