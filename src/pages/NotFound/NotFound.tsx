@@ -1,5 +1,10 @@
+import { NotFoundImage } from '../../assets'
+import { NotFoundWrapper } from './styles'
+
 export const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <NotFoundWrapper>
+      <NotFoundImage />
+    </NotFoundWrapper>
   )
 }

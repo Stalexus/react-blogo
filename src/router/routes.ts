@@ -3,7 +3,7 @@ export enum ROUTE {
     SEARCH = 'search',
     CONTENT = 'content',
     SIGN_IN = '/sign-in',
-    SIGN_UP = 'sign-up',
+    SIGN_UP = '/sign-up',
     NOT_FOUND = '*',
     RESTORE_PASSWORD = 'restore-password',
 }

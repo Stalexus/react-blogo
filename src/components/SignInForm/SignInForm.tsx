@@ -1,29 +1,30 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ROUTE } from '../../router/routes';
 import PacmanLoader from "react-spinners/ClipLoader";
 import { getFireBaseMessageError } from '../../utils/firebase-error'
-import { ErrorMessage, SignUpButton, SignUpLink, SignUpText, SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
+import { SignInButton, PasswordLink, SignInLink, SignInText, SignInEmailInput, SignInLabel, SignInPasswordInput, SignInStyled } from "./styles";
+import { ErrorMessage } from "../SignUpForm/styles";
 
-type SignUpFormValues = {
+type SignInFormValues = {
     email: string;
     password: string;
 };
 
-export const SignUpForm = () => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<SignUpFormValues>({
+export const SignInForm = () => {
+    const { register, handleSubmit, reset, formState: { errors } } = useForm<SignInFormValues>({
         mode: 'onSubmit',
         reValidateMode: 'onSubmit',
     });
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [errorMessage, setErrorMessage] = useState<null | string>(null)
 
-    const onSubmit: SubmitHandler<SignUpFormValues> = ({ email, password }) => {
+    const onSubmit: SubmitHandler<SignInFormValues> = ({ email, password }) => {
         setIsLoading(true);
         setErrorMessage(null);
         const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
             })
@@ -35,33 +36,34 @@ export const SignUpForm = () => {
             })
     }
     return (
-        <SignUpStyled onSubmit={handleSubmit(onSubmit)}>
-            <SignUpLabel>
+        <SignInStyled onSubmit={handleSubmit(onSubmit)}>
+            <SignInLabel>
                 Email
-                <SignUpEmailInput type="email" {...register('email', {
+                <SignInEmailInput type="email" {...register('email', {
                     required: 'Email is required',
                     pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                 })} />
-            </SignUpLabel>
+            </SignInLabel>
             {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-            <SignUpLabel>
+            <SignInLabel>
                 Password
-                <SignUpPasswordInput type="password" {...register('password', {
+                <SignInPasswordInput type="password" {...register('password', {
                     required: 'Password is required',
                     minLength: {
                         value: 6,
                         message: 'Password must be at least 6 characters',
                     }
                 })} />
-            </SignUpLabel>
+            </SignInLabel>
             {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
             {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-            <SignUpButton type='submit'>
-                {isLoading ? <PacmanLoader /> : 'Sign Up'}
-            </SignUpButton>
-            <SignUpText>You already have an account?{' '}
-                <SignUpLink to={ROUTE.SIGN_IN}>Sign In</SignUpLink>
-            </SignUpText>
-        </SignUpStyled>
+            <PasswordLink to={ROUTE.RESTORE_PASSWORD}>Forgot password?</PasswordLink>
+            <SignInButton type='submit'>
+                {isLoading ? <PacmanLoader /> : 'Sign In'}
+            </SignInButton>
+            <SignInText>Don’t have an account?{' '}
+                <SignInLink to={ROUTE.SIGN_UP}>Sign Up</SignInLink>
+            </SignInText>
+        </SignInStyled>
     )
 };

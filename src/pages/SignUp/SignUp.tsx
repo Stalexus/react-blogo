@@ -1,5 +1,5 @@
 import { SignUpForm } from '../../components/SignUpForm'
-import { Title } from '../../components/Title/Title'
+import { Title } from '../../components/Title'
 import { ROUTE } from '../../router/routes'
 import { HomeLink, StyledForm, StyledSignUp } from './styles'
 

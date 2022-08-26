@@ -4,13 +4,13 @@ import { Media, typography } from "../../ui";
 import { Color } from "../../ui/colors";
 
 export const SignUpStyled = styled.form`
-    max-width: 800px;
-    margin: auto;
-    gap: 10px;
     display: flex;
     flex-direction: column;
     justyfy-content: center;
     align-items: center;
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
     background-color: ${Color.White};
     border-radius: 16px;
 `;
@@ -37,37 +37,18 @@ export const SignUpPasswordInput = styled(SignUpEmailInput)`
 
 export const SignUpLabel = styled.label`
     ${typography.B1};
-    padding: 25px;
     display: grid;
+    padding: 40px;
 `;
 
-export const PasswordLink = styled(NavLink)`
-    width: 544px;
-    justify-content: start;
-    text-decoration: none;
-    color: black;
-    :hover {
-        color: ${Color.Violet};
-    }
-    ${Media.LG}{
-        width: 400px;
-    }
-    ${Media.MD}{
-        width: 300px;
-    }
-    ${Media.SM}{
-        width: 200px;
-    }
-`;
-
-export const LoginButton = styled.button`
+export const SignUpButton = styled.button`
     width: 544px;
     height: 56px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     background-color: ${Color.Primary};
     color: ${Color.White};
+    cursor: pointer;
     ${Media.LG}{
         width: 400px;
     }
@@ -79,12 +60,12 @@ export const LoginButton = styled.button`
     }
 `;
 
-export const SignInText = styled.p`
+export const SignUpText = styled.p`
     ${typography.B1};
     color: ${Color.Medium};
 `;
 
-export const SignInLink = styled(NavLink)`
+export const SignUpLink = styled(NavLink)`
     pading: 5px;
     text-decoration: none;
     color: ${Color.Violet};
