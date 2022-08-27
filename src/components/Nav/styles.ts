@@ -20,8 +20,8 @@ export const NavBarSearchLink = styled(NavLink)`
     grid-area: 1 / 9 / 2 / 10;
 `;
 
-export const Authorization = styled.div`
-    grid-area: 1 / 10 / 2 / 12;
+export const NavBarAuthorizationLink = styled(NavLink)`
+    grid-area: 1 / 11 / 2 / 13;
     text-align: center;
     ${typography.S1}
 `;

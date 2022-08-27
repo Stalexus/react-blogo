@@ -1,7 +1,9 @@
-import { Home } from './Home/Home'
-import { Content } from './Content/Content'
-import { Search } from './Search/Search'
-import { SignIn } from './SignIn/SignIn'
-import { NotFound } from './NotFound/NotFound'
+import { Home } from './Home'
+import { Content } from './Content'
+import { Search } from './Search'
+import { SignIn } from './SignIn'
+import { NotFound } from './NotFound'
+import { SignUp } from './SignUp'
+import { News } from './News'
 
-export { Home, Content, Search, SignIn, NotFound }
+export { Home, Content, Search, SignIn, SignUp, NotFound, News }

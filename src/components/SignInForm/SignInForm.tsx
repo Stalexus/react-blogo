@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ROUTE } from '../../router/routes';
 import PacmanLoader from "react-spinners/ClipLoader";
-import { getFireBaseMessageError } from '../../utils/firebase-error'
+import { getFirebaseMessageError } from '../../utils/firebase-error'
 import { SignInButton, PasswordLink, SignInLink, SignInText, SignInEmailInput, SignInLabel, SignInPasswordInput, SignInStyled } from "./styles";
 import { ErrorMessage } from "../SignUpForm/styles";
 
@@ -29,7 +29,7 @@ export const SignInForm = () => {
                 const user = userCredential.user;
             })
             .catch((error) => {
-                setErrorMessage(getFireBaseMessageError(error.code))
+                setErrorMessage(getFirebaseMessageError(error.code))
             }).finally(() => {
                 setIsLoading(false);
                 reset();

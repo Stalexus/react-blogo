@@ -7,8 +7,8 @@ export interface IArticle {
     newsSite: string;
     summary: string;
     publishedAt: string;
-    launches: Ilaunches[];
-    events: Ilaunches[];
+    launches: ILaunches[];
+    events: ILaunches[];
 }
 
 export interface IBlog {
@@ -19,11 +19,11 @@ export interface IBlog {
     newsSite: string;
     summary: string;
     publishedAt: string;
-    launches: Ilaunches[];
-    events: Ilaunches[];
+    launches: ILaunches[];
+    events: ILaunches[];
 }
 
-export interface Ilaunches {
+export interface ILaunches {
     id?: string;
     provide: string;
 }

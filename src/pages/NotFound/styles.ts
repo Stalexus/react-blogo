@@ -7,7 +7,7 @@ export const NotFoundImage = styled.div`
 `;
 
 export const NotFoundWrapper = styled.div`
-    width: 1280px;
+    width: 1260px;
     height: 800px;
     ${Media.LG} {
         width: 1024px;

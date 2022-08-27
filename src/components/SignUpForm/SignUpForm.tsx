@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { ROUTE } from '../../router/routes';
 import PacmanLoader from "react-spinners/ClipLoader";
-import { getFireBaseMessageError } from '../../utils/firebase-error'
+import { getFirebaseMessageError } from '../../utils/firebase-error'
 import { ErrorMessage, SignUpButton, SignUpLink, SignUpText, SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
 
 type SignUpFormValues = {
@@ -28,7 +28,7 @@ export const SignUpForm = () => {
                 const user = userCredential.user;
             })
             .catch((error) => {
-                setErrorMessage(getFireBaseMessageError(error.code))
+                setErrorMessage(getFirebaseMessageError(error.code))
             }).finally(() => {
                 setIsLoading(false);
                 reset();
