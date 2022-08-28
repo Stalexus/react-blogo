@@ -1,5 +1,5 @@
 import { IArticle } from '../../types'
-import { Picture, StyledArticle } from './styles';
+import { Picture, PictureWrapper, StyledArticle } from './styles';
 
 interface IProps {
     article: IArticle;
@@ -8,7 +8,9 @@ interface IProps {
 export const ArticleListItem = ({ article }: IProps) => {
     return (
         <StyledArticle>
-            <Picture src={article.imageUrl} alt='article' />
+            <PictureWrapper>
+                <Picture src={article.imageUrl} alt='article' />
+            </PictureWrapper>
             <h4>{article.publishedAt}</h4>
             <h4>{article.summary}</h4>
         </StyledArticle>

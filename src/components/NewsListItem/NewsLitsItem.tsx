@@ -1,4 +1,5 @@
 import { IBlog } from '../../types'
+import { PictureWrapper } from '../ArticleListItem/styles';
 import { Picture, StyledNews } from './styles';
 
 interface IProps {
@@ -8,7 +9,9 @@ interface IProps {
 export const NewsListItem = ({ blog }: IProps) => {
     return (
         <StyledNews>
-            <Picture src={blog.imageUrl} alt='article' />
+            <PictureWrapper>
+                <Picture src={blog.imageUrl} alt='article' />
+            </PictureWrapper>
             <h4>{blog.publishedAt}</h4>
             <h4>{blog.summary}</h4>
         </StyledNews>
