@@ -12,8 +12,8 @@ export const Home = () => {
   const [articles, setArticles] = useState<IArticle[]>([]);
 
   useEffect(() => {
-    blogAPI.getArticles().then(data => {
-      setArticles(data);
+    blogAPI.getArticles().then(aritcles => {
+      setArticles(aritcles);
     });
   }, []);
   return (

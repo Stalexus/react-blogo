@@ -10,7 +10,7 @@ export const ArticleList = ({ articles }: IProps) => {
     return (
         <StyledArticles>
             {articles.map(article => {
-                return <ArticleListItem article={article} />
+                return <ArticleListItem article={article} key={article.id} />
             })}
         </StyledArticles>
     )

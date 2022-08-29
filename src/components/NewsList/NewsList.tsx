@@ -10,7 +10,7 @@ export const NewsList = ({ blogs }: IProps) => {
     return (
         <StyledNews>
             {blogs.map(blog => {
-                return <NewsListItem blog={blog} />
+                return <NewsListItem blog={blog} key={blog.id} />
             })}
         </StyledNews>
     )

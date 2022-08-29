@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 import { Color } from "../../ui/colors";
 
-export const StyledArticle = styled.div`
+export const ArticleLink = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 300px;

@@ -4,7 +4,9 @@ export enum ROUTE {
     CONTENT = '/content',
     SIGN_IN = '/sign-in',
     SIGN_UP = '/sign-up',
-    NOT_FOUND = '*',
     RESTORE_PASSWORD = '/restore-password',
-    NEWS = '/news',
+    ATRICLES_DETAILS = '/articles/:id',
+    NEWS_DETAILS = '/blog/:id',
+    NEWS = '/blog',
+    NOT_FOUND = '*',
 }

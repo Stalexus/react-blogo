@@ -11,8 +11,8 @@ export const News = () => {
     const [blogs, setBlogs] = useState<IBlog[]>([]);
 
     useEffect(() => {
-        blogAPI.getBlogs().then(data => {
-            setBlogs(data);
+        blogAPI.getBlogs().then(blogs => {
+            setBlogs(blogs);
         });
     }, []);
     return (
@@ -20,7 +20,7 @@ export const News = () => {
             <Title text='News' />
             <LinkContainer>
                 <NavLink to={ROUTE.HOME}>Articles</NavLink>
-                <NavLink to=''>News</NavLink>
+                <NavLink to={ROUTE.NEWS}>News</NavLink>
             </LinkContainer>
             <NewsList blogs={blogs} />
         </>

@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 
-export const StyledNews = styled.div`
+export const NewsLink = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 300px;
