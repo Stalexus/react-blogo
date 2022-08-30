@@ -1,18 +1,34 @@
 type FirebaseMessageErrors =
     | 'auth/email-already-exists'
+    | 'auth/email-already-in-use'
+    | 'auth/user-not-found'
+    | 'auth/invalid-email'
+    | 'auth/invalid-password'
 
-enum ErrorMesage {
+enum ErrorMessage {
     UNKNOWN_ERROR = 'Unknown error, reload page',
-    EMAIL_ALLREADY_EXISTS = 'This email is already exists, please try again',
+    EMAIL_ALREADY_EXISTS = 'This email already exists',
+    EMAIL_ALREADY_IN_USE = 'This email is already in use, please try again',
+    USER_NOT_FOUND = "User not found",
+    INVALID_EMAIL = "Invalid email",
+    INVALID_PASSWORD = "Invalid password",
 }
 
-const getFirebaseMessageError = (code: FirebaseMessageErrors): ErrorMesage => {
+const getFirebaseMessageError = (code: FirebaseMessageErrors): ErrorMessage => {
     switch (code) {
-        case 'auth/email-already-exists':
-            return ErrorMesage.EMAIL_ALLREADY_EXISTS;
+        case "auth/email-already-exists":
+            return ErrorMessage.EMAIL_ALREADY_EXISTS;
+        case "auth/email-already-in-use":
+            return ErrorMessage.EMAIL_ALREADY_IN_USE;
+        case "auth/user-not-found":
+            return ErrorMessage.USER_NOT_FOUND;
+        case "auth/invalid-email":
+            return ErrorMessage.INVALID_EMAIL;
+        case "auth/invalid-password":
+            return ErrorMessage.INVALID_PASSWORD;
 
         default:
-            return ErrorMesage.UNKNOWN_ERROR;
+            return ErrorMessage.UNKNOWN_ERROR;
     }
 };
 
