@@ -7,7 +7,7 @@ const H1 = css`
     font-size: 32px;
     line-height: 48px;
   }
-  ${Media.XL} {
+  ${Media.XXL} {
     font-size: 56px;
     line-height: 80px;
   }
@@ -19,7 +19,7 @@ const H2 = css`
     font-size: 24px;
     line-height: 36px;
   }
-  ${Media.XL} {
+  ${Media.XXL} {
     font-size: 32px;
     line-height: 44px;
   }
