@@ -5,6 +5,7 @@ import { ROUTE } from '../../router/routes';
 import PacmanLoader from "react-spinners/ClipLoader";
 import { getFirebaseMessageError } from '../../utils/firebase-error'
 import { ErrorMessage, SignUpButton, SignUpLink, SignUpText, SignUpEmailInput, SignUpLabel, SignUpPasswordInput, SignUpStyled } from "./styles";
+import { Modal } from "../Modal";
 
 type SignUpFormValues = {
     email: string;
@@ -18,6 +19,12 @@ export const SignUpForm = () => {
     });
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [errorMessage, setErrorMessage] = useState<null | string>(null)
+    const [isOpen, toggleModal] = useState<boolean>(false)
+
+
+    const handleModal = () => {
+        toggleModal((isOpen) => !isOpen);
+    }
 
     const onSubmit: SubmitHandler<SignUpFormValues> = ({ email, password }) => {
         setIsLoading(true);
@@ -26,6 +33,7 @@ export const SignUpForm = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
+                handleModal()
             })
             .catch((error) => {
                 setErrorMessage(getFirebaseMessageError(error.code))
@@ -62,6 +70,7 @@ export const SignUpForm = () => {
             <SignUpText>You already have an account?{' '}
                 <SignUpLink to={ROUTE.SIGN_IN}>Sign In</SignUpLink>
             </SignUpText>
+            <Modal isOpen={isOpen} handleModal={handleModal} />
         </SignUpStyled>
     )
 };
