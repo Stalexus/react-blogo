@@ -8,5 +8,6 @@ export enum ROUTE {
     ATRICLES_DETAILS = '/articles/:id',
     NEWS_DETAILS = '/blog/:id',
     NEWS = '/blog',
+    ACCOUNT = '/account',
     NOT_FOUND = '*',
 }

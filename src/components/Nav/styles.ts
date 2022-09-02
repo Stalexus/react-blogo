@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const StyledNav = styled.div`
     display: grid;
-    grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
+    grid-template-columns: 0.1fr repeat(8,1fr) 0.1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -17,11 +17,11 @@ export const NavBarHomeLink = styled(NavLink)`
 `;
 
 export const NavBarSearchLink = styled(NavLink)`
-    grid-area: 1 / 9 / 2 / 10;
+    grid-area: 1 / 8 / 2 / 9;
 `;
 
 export const NavBarAuthorizationLink = styled(NavLink)`
-    grid-area: 1 / 11 / 2 / 13;
+    grid-area: 1 / 9 / 2 / 10;
     text-align: center;
     ${typography.S1}
 `;

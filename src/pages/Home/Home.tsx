@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
 import { ArticleList } from "../../components/ArticleList"
 import { Title } from "../../components/Title"
 import { ROUTE } from "../../router/routes"
-import { blogAPI } from "../../services/blogsApi"
+import { fetchArticles } from "../../store/feautures/articlesSlise"
+import { useAppDispatch } from "../../store/hooks"
 import { IArticle } from "../../types"
 import { ArticleLink, ButtonContainer, LinkContainer, NewsLink, SortContainer, SortDay, SortMonth, SortSelect, SortWeek, SortYear, StyledHome } from "./styles"
 
 export const Home = () => {
 
+  const dispatch = useAppDispatch();
+  const [limit, setLimit] = useState('12')
   const [articles, setArticles] = useState<IArticle[]>([]);
 
   useEffect(() => {
-    blogAPI.getArticles().then(aritcles => {
-      setArticles(aritcles);
-    });
-  }, []);
+    dispatch(fetchArticles(limit));
+  }, [dispatch, limit]);
   return (
     <StyledHome>
       <Title text='Blog' />
