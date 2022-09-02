@@ -3,7 +3,7 @@ export enum Media {
   MD = "@media (max-width: 768px)",
   LG = "@media (max-width: 900px)",
   XL = "@media (max-width: 1024px)",
-  XXL = "@media (max-width: 2048px)",
+  XXL = "@media (max-width: 2560px)",
 }
 
 interface IBreakpoints {
@@ -17,7 +17,7 @@ interface IBreakpoints {
 export const Breakpoints: IBreakpoints = {
   SM: 420,
   MD: 768,
-  LG: 992,
+  LG: 900,
   XL: 1024,
-  XXL: 1280,
+  XXL: 2560,
 }
