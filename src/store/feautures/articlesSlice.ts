@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
 import { blogAPI } from "../../services/blogsApi";
-import { IArticle } from "../../types";
+import { IArticle, RequestQueryParams } from "../../types";
 
 interface ArticleState {
     isLoading: boolean;
@@ -11,7 +11,7 @@ interface ArticleState {
 
 export const fetchArticles = createAsyncThunk<
     IArticle[],
-    { limit: string, page: string },
+    RequestQueryParams,
     { rejectValue: string }
 >('articles/fetchArticles',
     async ({ limit, page }, { rejectWithValue }) => {

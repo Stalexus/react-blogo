@@ -10,7 +10,7 @@ import { fetchNews } from "../../store/feautures/newsSlice";
 
 export const News = () => {
     const dispatch = useAppDispatch();
-    const { results, isLoading, error } = useAppSelector(({ articles }) => articles);
+    const { results, isLoading, error } = useAppSelector(({ blogs }) => blogs);
     const [limit, setLimit] = useState('12')
     const { page = '' } = useParams();
     const [blogs, setBlogs] = useState<IBlog[]>([]);
