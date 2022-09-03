@@ -3,14 +3,17 @@ import { ROUTE } from "./routes";
 type RouteType =
     | [ROUTE.HOME]
     | [ROUTE.SEARCH]
-    | [ROUTE.CONTENT]
     | [ROUTE.SIGN_IN]
     | [ROUTE.SIGN_UP]
     | [ROUTE.RESTORE_PASSWORD]
     | [ROUTE.ATRICLES_DETAILS, { id: number }]
     | [ROUTE.NEWS_DETAILS, { id: number }]
+    | [ROUTE.ATRICLES_PAGES]
+    | [ROUTE.ARTICLES]
+    | [ROUTE.NEWS_PAGES]
     | [ROUTE.NEWS]
-    | [ROUTE.NOT_FOUND];
+    | [ROUTE.ACCOUNT]
+    | [ROUTE.NOT_FOUND]
 
 export const createPath = (...args: RouteType) => {
     const [path, params] = args;

@@ -11,12 +11,12 @@ interface ArticleState {
 
 export const fetchArticles = createAsyncThunk<
     IArticle[],
-    string,
+    { limit: string, page: string },
     { rejectValue: string }
 >('articles/fetchArticles',
-    async (limit, { rejectWithValue }) => {
+    async ({ limit, page }, { rejectWithValue }) => {
         try {
-            return await blogAPI.getArticles(limit);
+            return await blogAPI.getArticles({ limit, page });
         } catch (error) {
             const axiosError = error as AxiosError
             return rejectWithValue(axiosError.message)

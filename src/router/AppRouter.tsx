@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { MainTemplate } from '../components/MainTemplate'
 import { RequareAuth } from '../components/RequareAuth'
-import { Content, Home, News, NotFound, Search, SignIn, SignUp } from '../pages'
+import { Home, News, NotFound, Search, SignIn, SignUp } from '../pages'
 import { Account } from '../pages/Account'
 import { RestorePassword } from '../pages/RestorePassword'
 import { ROUTE } from './routes'
@@ -13,7 +13,6 @@ export const AppRouter = () => {
                 <Route index element={<Home />} />
                 <Route path={ROUTE.SEARCH} element={<Search />} />
                 <Route element={<RequareAuth />}>
-                    <Route path={ROUTE.CONTENT} element={<Content />} />
                     <Route path={ROUTE.ACCOUNT} element={<Account />} />
                 </Route>
                 <Route path={ROUTE.SIGN_IN} element={<SignIn />} />

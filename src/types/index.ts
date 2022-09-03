@@ -27,3 +27,7 @@ export interface ILaunches {
     id?: string;
     provide: string;
 }
+
+export type RequestQueryParams = {
+    limit: string, page: string
+}
