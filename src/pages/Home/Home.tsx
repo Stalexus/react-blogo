@@ -5,16 +5,14 @@ import { Title } from "../../components/Title"
 import { ROUTE } from "../../router/routes"
 import { fetchArticles } from "../../store/feautures/articlesSlice"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
-import { IArticle } from "../../types"
 import { ArticleLink, ButtonContainer, LinkContainer, NewsLink, SortContainer, SortDay, SortMonth, SortSelect, SortWeek, SortYear, StyledHome } from "./styles"
 
 export const Home = () => {
 
   const dispatch = useAppDispatch();
   const { results, isLoading, error } = useAppSelector(({ articles }) => articles);
-  const [articles, setArticles] = useState<IArticle[]>([]);
   const { page = '' } = useParams();
-  const [limit, setLimit] = useState('12')
+  const [limit, setLimit] = useState('9');
 
   useEffect(() => {
     dispatch(fetchArticles({ limit, page }));

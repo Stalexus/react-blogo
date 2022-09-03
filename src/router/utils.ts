@@ -8,7 +8,7 @@ type RouteType =
     | [ROUTE.RESTORE_PASSWORD]
     | [ROUTE.ATRICLES_DETAILS, { id: number }]
     | [ROUTE.NEWS_DETAILS, { id: number }]
-    | [ROUTE.ATRICLES_PAGES]
+    | [ROUTE.ARTICLES_PAGES]
     | [ROUTE.ARTICLES]
     | [ROUTE.NEWS_PAGES]
     | [ROUTE.NEWS]

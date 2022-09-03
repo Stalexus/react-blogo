@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styled from "styled-components"
+import styled from "styled-components";
 import { SortButton } from "../../components/SortButton";
 import { Media } from "../../ui";
 import { Color } from "../../ui/colors";
@@ -64,4 +64,10 @@ export const ArticleLink = styled(NavLink)`
 `;
 
 export const NewsLink = styled(ArticleLink)`
+`;
+
+export const PaginationBtn = styled.button`
+    border: none;
+    backgroung: tranparent;
+    color: ${Color.Medium};
 `;

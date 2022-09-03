@@ -5,5 +5,6 @@ import { SignIn } from './SignIn'
 import { NotFound } from './NotFound'
 import { SignUp } from './SignUp'
 import { News } from './News'
+import { Articles } from './Articles'
 
-export { Home, Content, Search, SignIn, SignUp, NotFound, News }
+export { Home, Content, Search, SignIn, SignUp, NotFound, News, Articles }
