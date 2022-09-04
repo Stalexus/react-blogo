@@ -21,7 +21,6 @@ export const SortContainer = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-
 `;
 
 export const SortDay = styled(SortButton)`
@@ -58,7 +57,7 @@ export const StyledHome = styled.div`
 
 export const ArticleLink = styled(NavLink)`
     color: ${Color.Secondary};
-    :hover {
+    :after {
         border-bottom: 2px solid ${Color.Secondary};
     }
 `;

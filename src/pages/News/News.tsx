@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { NewsList } from "../../components/NewsList";
 import { Title } from "../../components/Title";
 import { ROUTE } from "../../router/routes";
-import { LinkContainer, PaginationBtn } from "../Home/styles";
+import { ArticleLink, LinkContainer, NewsLink, PaginationBtn } from "../Home/styles";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchNews } from "../../store/feautures/newsSlice";
 import { StyledNews } from "./styeles";
@@ -29,8 +29,8 @@ export const News = () => {
         <StyledNews>
             <Title text='News' />
             <LinkContainer>
-                <NavLink to={ROUTE.ARTICLES}>Articles</NavLink>
-                <NavLink to={ROUTE.NEWS}>News</NavLink>
+                <ArticleLink to={ROUTE.ARTICLES}>Articles</ArticleLink>
+                <NewsLink to={ROUTE.NEWS}>News</NewsLink>
             </LinkContainer>
             <NewsList blogs={results} isLoading={isLoading} errorMessage={error} />
             <PaginationBtn onClick={handlePrevPage} className={`${page === '1' && 'disabled'}`}>← Prev</PaginationBtn>

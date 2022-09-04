@@ -8,12 +8,15 @@ interface IProps {
 }
 
 export const ArticleListItem = ({ article }: IProps) => {
+
+    const date = new Date(article.publishedAt).toDateString();
+
     return (
         <ArticleLink to={createPath(ROUTE.ATRICLES_DETAILS, { id: article.id })}>
             <PictureWrapper>
                 <Picture src={article.imageUrl} alt='article' />
             </PictureWrapper>
-            <h4>{article.publishedAt}</h4>
+            <h4>{date}</h4>
             <h4>{article.summary}</h4>
         </ArticleLink>
     )

@@ -32,7 +32,7 @@ export const Articles = () => {
 
     return (
         <StyledArticle>
-            <Title text='Blog' />
+            <Title text='Articles' />
             <LinkContainer>
                 <ArticleLink to={ROUTE.ARTICLES}>Articles</ArticleLink>
                 <NewsLink to={ROUTE.NEWS}>News</NewsLink>
