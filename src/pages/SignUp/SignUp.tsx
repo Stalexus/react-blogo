@@ -7,7 +7,7 @@ export const SignUp = () => {
     return (
         <StyledSignUp>
             <HomeLink to={ROUTE.HOME}>Back to home</HomeLink>
-            <Title text='SignUp' />
+            <Title text='Sign Up' />
             <StyledForm>
                 <SignUpForm />
             </StyledForm>

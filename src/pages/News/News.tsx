@@ -5,7 +5,7 @@ import { Title } from "../../components/Title";
 import { ROUTE } from "../../router/routes";
 import { ArticleLink, LinkContainer, NewsLink, PaginationBtn } from "../Home/styles";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { fetchNews } from "../../store/feautures/newsSlice";
+import { fetchNews } from "../../store/features/newsSlice";
 import { StyledNews } from "./styeles";
 
 export const News = () => {

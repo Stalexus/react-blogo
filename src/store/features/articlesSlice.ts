@@ -7,6 +7,7 @@ interface ArticleState {
     isLoading: boolean;
     error: null | string;
     results: IArticle[];
+    searchArea?: string;
 }
 
 export const fetchArticles = createAsyncThunk<
@@ -32,7 +33,14 @@ const initialState: ArticleState = {
 const articlesSlice = createSlice({
     name: 'articles',
     initialState,
-    reducers: {},
+    reducers: {
+        cleanStore: (state) => {
+            state.results = []
+        },
+        SearchArea: (state, { payload }) => {
+            state.searchArea = payload
+        }
+    },
     extraReducers(builder) {
         builder.addCase(fetchArticles.pending, state => {
             state.isLoading = true;
@@ -51,4 +59,5 @@ const articlesSlice = createSlice({
     },
 })
 
+export const { cleanStore, SearchArea } = articlesSlice.actions;
 export default articlesSlice.reducer

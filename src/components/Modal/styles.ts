@@ -12,10 +12,7 @@ export const ModalBackground = styled.div`
   justify-content: center;
   align-items:center;
   backgroundColor: ${Color.Light}
-  ${Media.XXL}{
-    top: 16%;
-    left: 40%;
-  }
+
   ${Media.XL}{
     top: 32%;
     left: 27%;

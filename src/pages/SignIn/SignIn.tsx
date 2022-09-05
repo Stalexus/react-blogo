@@ -8,7 +8,7 @@ export const SignIn = () => {
   return (
     <StyledSignIn>
       <HomeLink to={ROUTE.HOME}>Back to home</HomeLink>
-      <Title text='SignIn' />
+      <Title text='Sign In' />
       <StyledForm>
         <SignInForm />
       </StyledForm>

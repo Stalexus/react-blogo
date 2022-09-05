@@ -7,6 +7,7 @@ interface BlogState {
     isLoading: boolean;
     error: null | string;
     results: IBlog[];
+    searchArea?: string;
 }
 
 export const fetchNews = createAsyncThunk<
@@ -32,7 +33,14 @@ const initialState: BlogState = {
 const newsSlice = createSlice({
     name: 'news',
     initialState,
-    reducers: {},
+    reducers: {
+        cleanStore: (state) => {
+            state.results = []
+        },
+        SearchArea: (state, { payload }) => {
+            state.searchArea = payload
+        }
+    },
     extraReducers(builder) {
         builder.addCase(fetchNews.pending, state => {
             state.isLoading = true;
@@ -51,4 +59,5 @@ const newsSlice = createSlice({
     },
 })
 
+export const { cleanStore, SearchArea } = newsSlice.actions;
 export default newsSlice.reducer

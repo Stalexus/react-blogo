@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useSearch = (value: string, delay: number) => {
+export const useDebounce = (value: string, delay: number) => {
     const [searchValue, setSearchValue] = useState<string>(value);
 
     useEffect(() => {

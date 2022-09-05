@@ -5,7 +5,7 @@ import { App } from './App';
 import { GlobalStyle } from './ui/GlobalStyles';
 import './firebase';
 import { Provider } from 'react-redux';
-import { store } from './store/hooks';
+import { store } from './store';
 
 
 const root = ReactDOM.createRoot(

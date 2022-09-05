@@ -3,13 +3,11 @@ import { Media } from "./media";
 
 const H1 = css`
   font-weight: 700;
+  font-size: 56px;
+  line-height: 80px;
   ${Media.SM} {
     font-size: 32px;
     line-height: 48px;
-  }
-  ${Media.XXL} {
-    font-size: 56px;
-    line-height: 80px;
   }
 `;
 
@@ -19,7 +17,7 @@ const H2 = css`
     font-size: 24px;
     line-height: 36px;
   }
-  ${Media.XXL} {
+  ${Media.XL} {
     font-size: 32px;
     line-height: 44px;
   }
