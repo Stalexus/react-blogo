@@ -20,7 +20,7 @@ export const PasswordLink = styled(NavLink)`
     display: flex;
     justify-content: start;
     text-decoration: none;
-    width: 544px;
+    width: 300px;
     color: black;
     :hover {
         color: ${Color.Violet};

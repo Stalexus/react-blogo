@@ -9,14 +9,14 @@ export const SignUpStyled = styled.form`
     justyfy-content: center;
     align-items: center;
     gap: 10px;
-    max-width: 800px;
+    max-width: 520px;
     margin: auto;
     background-color: ${Color.White};
     border-radius: 16px;
 `;
 
 export const SignUpEmailInput = styled.input`
-    width: 544px;
+    width: 300px;
     height: 56px;
     font-size: 17px;
     border: 1px solid rgba(49, 48, 55, 0.1);
@@ -42,7 +42,7 @@ export const SignUpLabel = styled.label`
 `;
 
 export const SignUpButton = styled.button`
-    width: 544px;
+    width: 300px;
     height: 56px;
     border: none;
     border-radius: 4px;

@@ -18,7 +18,7 @@ export const StyledForm = styled.div`
 export const HomeLink = styled(NavLink)`
     padding: 10px;
     text-decoration: none;
-    color: black;
+    color: ${Color.Medium};
     :hover {
         color: ${Color.Violet};
     } 

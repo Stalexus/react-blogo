@@ -6,7 +6,7 @@ export const ArticleLink = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 400px;
+  height: 340px;
   padding: 10px;
 `;
 
@@ -25,4 +25,9 @@ export const PictureWrapper = styled.div`
   height: 250px;
   border-radius: 15px;
   background-color: ${Color.Violet};
+`;
+
+export const Description = styled.p`
+overflow: hidden;
+text-overflow: ellipsis;
 `;

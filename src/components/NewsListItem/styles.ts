@@ -5,7 +5,7 @@ export const NewsLink = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 400px;
+  height: 340px;
   padding: 10px;
 `;
 

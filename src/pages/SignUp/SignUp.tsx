@@ -6,8 +6,8 @@ import { HomeLink, StyledForm, StyledSignUp } from './styles'
 export const SignUp = () => {
     return (
         <StyledSignUp>
-            <HomeLink to={ROUTE.HOME}>Back to home</HomeLink>
             <Title text='Sign Up' />
+            <HomeLink to={ROUTE.HOME}>Back to home</HomeLink>
             <StyledForm>
                 <SignUpForm />
             </StyledForm>

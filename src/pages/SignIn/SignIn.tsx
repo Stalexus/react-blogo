@@ -7,8 +7,8 @@ import { StyledSignIn } from "./styles"
 export const SignIn = () => {
   return (
     <StyledSignIn>
-      <HomeLink to={ROUTE.HOME}>Back to home</HomeLink>
       <Title text='Sign In' />
+      <HomeLink to={ROUTE.HOME}>Back to home</HomeLink>
       <StyledForm>
         <SignInForm />
       </StyledForm>

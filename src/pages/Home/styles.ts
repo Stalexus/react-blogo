@@ -57,8 +57,8 @@ export const StyledHome = styled.div`
 
 export const ArticleLink = styled(NavLink)`
     color: ${Color.Secondary};
-    :after {
-        border-bottom: 2px solid ${Color.Secondary};
+    :hover {
+        color: ${Color.Violet};
     }
 `;
 
