@@ -35,15 +35,6 @@ export const SortMonth = styled(SortButton)`
 export const SortYear = styled(SortButton)`
 `;
 
-export const SortSelect = styled.select`
-    width: 250px;
-    height: 50px;
-    border: none;
-    ${Media.LG}{
-        width: 200px;
-    }
-`;
-
 export const StyledHome = styled.div`
     margin: auto; 
     ${Media.LG}{

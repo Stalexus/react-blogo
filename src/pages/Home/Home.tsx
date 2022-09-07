@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ArticleList } from "../../components/ArticleList"
+import { CustomSelect } from "../../components/CustomSelect"
 import { Title } from "../../components/Title"
 import { ROUTE } from "../../router/routes"
 import { fetchArticles } from "../../store/features/articlesSlice"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
-import { ArticleLink, ButtonContainer, LinkContainer, NewsLink, SortContainer, SortDay, SortMonth, SortSelect, SortWeek, SortYear, StyledHome } from "./styles"
+import { ArticleLink, ButtonContainer, LinkContainer, NewsLink, SortContainer, SortDay, SortMonth, SortWeek, SortYear, StyledHome } from "./styles"
 
 export const Home = () => {
 
@@ -32,7 +33,7 @@ export const Home = () => {
           <SortMonth text='Month' />
           <SortYear text='Year' />
         </ButtonContainer>
-        <SortSelect />
+        <CustomSelect />
       </SortContainer>
       <ArticleList articles={results} isLoading={isLoading} errorMessage={error} />
     </StyledHome>

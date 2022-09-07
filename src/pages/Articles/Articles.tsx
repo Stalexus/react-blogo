@@ -39,7 +39,7 @@ export const Articles = () => {
             </LinkContainer>
             <ArticleList articles={results} isLoading={isLoading} errorMessage={error} />
             <PaginationBtn onClick={handlePrevPage} className={`${page === '1' && 'disabled'}`}>← Prev</PaginationBtn>
-            <PaginationBtn onClick={handleNextPage}>Next →</PaginationBtn>
+            <PaginationBtn onClick={handleNextPage} className={`${page === '804' && 'disabled'}`}>Next →</PaginationBtn>
         </StyledArticle>
     )
 }

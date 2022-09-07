@@ -31,3 +31,8 @@ export interface ILaunches {
 export type RequestQueryParams = {
     limit: string, page: string
 }
+
+export interface UserData {
+    displayName: string | null; 
+    email: string | null;
+  }

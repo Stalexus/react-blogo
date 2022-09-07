@@ -1,11 +1,15 @@
-import { useState } from 'react'
 import Select from 'react-select'
+import { StyledSelect } from './styles';
+
 
 export const CustomSelect = () => {
     const options = [
-        { value: '', label: '' },
+        { value: 'first new', label: 'First new' },
+        { value: 'obsolete first', label: 'Obsolete first' },
     ]
     return (
-        <Select options={options} />
+        <Select options={options} 
+        isMulti={false}
+/>
     );
 };
