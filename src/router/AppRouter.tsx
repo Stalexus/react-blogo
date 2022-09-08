@@ -1,9 +1,17 @@
 import { Route, Routes } from 'react-router-dom'
 import { MainTemplate } from '../components/MainTemplate'
 import { RequareAuth } from '../components/RequareAuth'
-import { Articles, Home, News, NotFound, Search, SignIn, SignUp } from '../pages'
-import { Account } from '../pages/Account'
-import { RestorePassword } from '../pages/RestorePassword'
+import { 
+    Account, 
+    Articles, 
+    Home, 
+    News, 
+    NotFound, 
+    RestorePassword, 
+    Search, 
+    SignIn, 
+    SignUp 
+} from '../pages'
 import { ROUTE } from './routes'
 
 export const AppRouter = () => {

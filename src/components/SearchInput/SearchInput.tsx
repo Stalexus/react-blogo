@@ -1,18 +1,24 @@
-import { useEffect } from "react";
-import { useInput } from "../../hooks/useInput";
-import { useDebounce } from "../../hooks/useDebounce";
+import { ChangeEventHandler } from "react";
 import { StyledSearch } from "./styles";
-import { useAppDispatch } from "../../store/hooks";
-import { SearchArea } from "../../store/features/articlesSlice";
 
-export const SearchInput = () => {
-  const searchInput = useInput();
-  const debounceValue = useDebounce(searchInput.value, 500);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(SearchArea(debounceValue))
-  }, [debounceValue, dispatch]);
-
-  return <StyledSearch placeholder="search ..." type="text" {...searchInput} />;
+interface IProps {
+    placeholder: string;
+    type: string;
+    value?: string;
+    onChange?: ChangeEventHandler<HTMLInputElement>;
+    onBlur?: () => void;
+    error?: string | undefined;
 }
+
+export const SearchInput = ({ placeholder, type, value, onChange, onBlur, error }: IProps) => {
+    return (
+        <StyledSearch
+            placeholder={placeholder}
+            type={type}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            error={error}
+        />
+    );
+};

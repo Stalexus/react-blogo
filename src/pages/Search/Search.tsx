@@ -1,25 +1,26 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { ArticleList } from "../../components/ArticleList";
-import { SearchInput } from "../../components/SearchInput"
-import { fetchArticles } from "../../store";
+import { SearchInput } from "../../components/SearchInput";
+import { useDebounce } from "../../hooks/useDebounce";
+import { useInput } from "../../hooks/useInput";
+import { SearchArea } from "../../store/features/articlesSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 
 export const Search = () => {
 
-  const dispatch = useAppDispatch();
   const { results, isLoading, error } = useAppSelector(({ articles }) => articles);
-  const { page = '' } = useParams();
-  const [limit, setLimit] = useState('15');
+  const search = useInput("");
+  const debounceValue = useDebounce(search.value, 500);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(fetchArticles({ limit, page }));
-  }, [dispatch, limit, page]);
+    dispatch(SearchArea(debounceValue))
+  }, [debounceValue, dispatch]);
 
   return (
     <>
-    <SearchInput />
-    <ArticleList articles={results} isLoading={isLoading} errorMessage={error} />
+      <SearchInput placeholder="Search" type="text" {...search} />
+      <ArticleList articles={results} isLoading={isLoading} errorMessage={error} />
     </>
   )
 }

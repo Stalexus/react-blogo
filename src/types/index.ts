@@ -1,3 +1,5 @@
+import { ChangeEventHandler } from "react";
+
 export interface IArticle {
     id: number;
     featured: boolean;
@@ -33,6 +35,11 @@ export type RequestQueryParams = {
 }
 
 export interface UserData {
-    displayName: string | null; 
+    displayName: string | null;
     email: string | null;
-  }
+}
+
+export interface ISearchOptions {
+    value: string;
+    onChange: ChangeEventHandler<HTMLInputElement>;
+}

@@ -7,7 +7,7 @@ import { fetchArticles } from "../../store/features/articlesSlice"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import { IArticle } from "../../types"
 import { ArticleLink, LinkContainer, NewsLink, PaginationBtn } from "../Home/styles"
-import { StyledArticle } from "./styles"
+import { PaginationContainer, StyledArticle } from "./styles"
 
 export const Articles = () => {
 
@@ -38,8 +38,10 @@ export const Articles = () => {
                 <NewsLink to={ROUTE.NEWS}>News</NewsLink>
             </LinkContainer>
             <ArticleList articles={results} isLoading={isLoading} errorMessage={error} />
+            <PaginationContainer>
             <PaginationBtn onClick={handlePrevPage} className={`${page === '1' && 'disabled'}`}>← Prev</PaginationBtn>
             <PaginationBtn onClick={handleNextPage} className={`${page === '804' && 'disabled'}`}>Next →</PaginationBtn>
+            </PaginationContainer>
         </StyledArticle>
     )
 }

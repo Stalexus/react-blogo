@@ -6,5 +6,7 @@ import { NotFound } from './NotFound'
 import { SignUp } from './SignUp'
 import { News } from './News'
 import { Articles } from './Articles'
+import { Account } from './Account'
+import { RestorePassword } from './RestorePassword'
 
-export { Home, Content, Search, SignIn, SignUp, NotFound, News, Articles }
+export { Home, Content, Search, SignIn, SignUp, NotFound, News, Articles, Account, RestorePassword }

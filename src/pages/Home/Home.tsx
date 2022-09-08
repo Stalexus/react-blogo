@@ -6,7 +6,18 @@ import { Title } from "../../components/Title"
 import { ROUTE } from "../../router/routes"
 import { fetchArticles } from "../../store/features/articlesSlice"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
-import { ArticleLink, ButtonContainer, LinkContainer, NewsLink, SortContainer, SortDay, SortMonth, SortWeek, SortYear, StyledHome } from "./styles"
+import {
+  ArticleLink,
+  ButtonContainer,
+  LinkContainer,
+  NewsLink,
+  SortContainer,
+  SortDay,
+  SortMonth,
+  SortWeek,
+  SortYear,
+  StyledHome
+} from "./styles"
 
 export const Home = () => {
 

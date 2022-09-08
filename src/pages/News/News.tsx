@@ -7,6 +7,7 @@ import { ArticleLink, LinkContainer, NewsLink, PaginationBtn } from "../Home/sty
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchNews } from "../../store/features/newsSlice";
 import { StyledNews } from "./styeles";
+import { PaginationContainer } from "../Articles/styles";
 
 export const News = () => {
     const dispatch = useAppDispatch();
@@ -33,8 +34,10 @@ export const News = () => {
                 <NewsLink to={ROUTE.NEWS}>News</NewsLink>
             </LinkContainer>
             <NewsList blogs={results} isLoading={isLoading} errorMessage={error} />
+            <PaginationContainer>
             <PaginationBtn onClick={handlePrevPage} className={`${page === '1' && 'disabled'}`}>← Prev</PaginationBtn>
-            <PaginationBtn onClick={handleNextPage}>Next →</PaginationBtn>
+            <PaginationBtn onClick={handleNextPage} className={`${page === '804' && 'disabled'}`}>Next →</PaginationBtn>
+            </PaginationContainer>
         </StyledNews>
     )
 }
