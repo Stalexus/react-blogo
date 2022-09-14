@@ -1,3 +1,3 @@
-import { NewsListItem } from './NewsLitsItem'
+import { NewsListItem } from "./NewsLitsItem";
 
-export { NewsListItem }
+export { NewsListItem };

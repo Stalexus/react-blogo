@@ -1,3 +1,3 @@
-import { blogAPI } from './blogsApi'
+import { blogAPI } from "./blogsApi";
 
-export { blogAPI }
+export { blogAPI };

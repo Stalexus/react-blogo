@@ -1,7 +1,7 @@
-import { ROUTE } from '../../router/routes';
-import { createPath } from '../../router/utils';
-import { IArticle } from '../../types'
-import { Picture, PictureWrapper, ArticleLink, Description } from './styles';
+import { ROUTE } from "../../router/routes";
+import { createPath } from "../../router/utils";
+import { IArticle } from "../../types";
+import { Picture, PictureWrapper, ArticleLink, Description } from "./styles";
 
 interface IProps {
     article: IArticle;
@@ -9,15 +9,15 @@ interface IProps {
 
 export const ArticleListItem = ({ article }: IProps) => {
 
-    const date = new Date(article.publishedAt).toDateString();
+  const date = new Date(article.publishedAt).toDateString();
 
-    return (
-        <ArticleLink to={createPath(ROUTE.ATRICLES_DETAILS, { id: article.id })}>
-            <PictureWrapper>
-                <Picture src={article.imageUrl} alt='article' />
-            </PictureWrapper>
-            <h4>{date}</h4>
-            <Description>{article.summary}</Description>
-        </ArticleLink>
-    )
-}
+  return (
+    <ArticleLink to={createPath(ROUTE.ATRICLES_DETAILS, { id: article.id })}>
+      <PictureWrapper>
+        <Picture src={article.imageUrl} alt='article' />
+      </PictureWrapper>
+      <h4>{date}</h4>
+      <Description>{article.summary}</Description>
+    </ArticleLink>
+  );
+};

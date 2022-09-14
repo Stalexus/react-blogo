@@ -1,5 +1,5 @@
 import { getAuth } from "firebase/auth";
-import { DotLoader } from 'react-spinners';
+import { DotLoader } from "react-spinners";
 import { useAuth } from "../../hooks/useAuth";
 import { Container, Key, Title, Value, Wrapper } from "./styles";
 

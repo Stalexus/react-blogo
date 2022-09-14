@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
-import ReactDOM from 'react-dom';
+import { ReactNode } from "react";
+import ReactDOM from "react-dom";
 
 export enum PortalTarget {
-    ROOT = 'root',
-    MODAL = 'modal',
+    ROOT = "root",
+    MODAL = "modal",
 }
 
 interface PortalProps {
@@ -12,7 +12,7 @@ interface PortalProps {
 }
 
 export const Portal = ({ target, children }: PortalProps) => {
-    const root = document.getElementById(target);
+  const root = document.getElementById(target);
 
-    return root ? ReactDOM.createPortal(children, root) : null;
-}
+  return root ? ReactDOM.createPortal(children, root) : null;
+};

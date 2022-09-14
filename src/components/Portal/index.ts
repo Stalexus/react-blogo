@@ -1,3 +1,3 @@
-import { PortalTarget, Portal } from './Portal'
+import { PortalTarget, Portal } from "./Portal";
 
-export { PortalTarget, Portal }
+export { PortalTarget, Portal };

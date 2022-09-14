@@ -10,34 +10,36 @@ import { StyledNews } from "./styeles";
 import { PaginationContainer } from "../Articles/styles";
 
 export const News = () => {
-    const dispatch = useAppDispatch();
-    const { results, isLoading, error } = useAppSelector(({ blogs }) => blogs);
-    const { page = '' } = useParams();
-    const [limit, setLimit] = useState('9')
-    const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const { results, isLoading, error } = useAppSelector(({ blogs }) => blogs);
+  const { page = "" } = useParams();
+  const [limit] = useState("9");
+  const navigate = useNavigate();
 
-    const handleNextPage = () => {
-        navigate(`../blogs/${+page + 1}`);
-    };
-    const handlePrevPage = () => {
-        navigate(`../blogs/${+page - 1}`);
-    };
+  const handleNextPage = () => {
+    navigate(`../blogs/${+page + 1}`);
+  };
+  const handlePrevPage = () => {
+    navigate(`../blogs/${+page - 1}`);
+  };
 
-    useEffect(() => {
-        dispatch(fetchNews({ limit, page }));
-    }, [dispatch, limit, page]);
-    return (
-        <StyledNews>
-            <Title text='News' />
-            <LinkContainer>
-                <ArticleLink to={ROUTE.ARTICLES}>Articles</ArticleLink>
-                <NewsLink to={ROUTE.NEWS}>News</NewsLink>
-            </LinkContainer>
-            <NewsList blogs={results} isLoading={isLoading} errorMessage={error} />
-            <PaginationContainer>
-            <PaginationBtn onClick={handlePrevPage} className={`${page === '1' && 'disabled'}`}>← Prev</PaginationBtn>
-            <PaginationBtn onClick={handleNextPage} className={`${page === '804' && 'disabled'}`}>Next →</PaginationBtn>
-            </PaginationContainer>
-        </StyledNews>
-    )
-}
+  useEffect(() => {
+    dispatch(fetchNews({ limit, page }));
+  }, [dispatch, limit, page]);
+  return (
+    <StyledNews>
+      <Title text='News' />
+      <LinkContainer>
+        <ArticleLink to={ROUTE.ARTICLES}>Articles</ArticleLink>
+        <NewsLink to={ROUTE.NEWS}>News</NewsLink>
+      </LinkContainer>
+      <NewsList blogs={results} isLoading={isLoading} errorMessage={error} />
+      <PaginationContainer>
+        <PaginationBtn onClick={handlePrevPage}
+          className={`${page === "1" && "disabled"}`}>← Prev</PaginationBtn>
+        <PaginationBtn onClick={handleNextPage}
+          className={`${page === "804" && "disabled"}`}>Next →</PaginationBtn>
+      </PaginationContainer>
+    </StyledNews>
+  );
+};

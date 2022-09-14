@@ -10,22 +10,20 @@ export const ModalBackground = styled.div`
   left: 31%;
   display: flex;
   justify-content: center;
-  align-items:center;
-  backgroundColor: ${Color.Light}
-
-  ${Media.XL}{
+  align-items: center;
+  backgroundcolor: ${Color.Light} ${Media.XL} {
     top: 32%;
     left: 27%;
   }
-  ${Media.LG}{
+  ${Media.LG} {
     top: 43%;
     left: 23%;
   }
-  ${Media.MD}{
+  ${Media.MD} {
     top: 35%;
     left: 19%;
   }
-  ${Media.SM}{
+  ${Media.SM} {
     width: 225px;
     top: 29%;
     left: 24%;
@@ -65,6 +63,6 @@ export const ModalButton = styled(Link)`
   border-radius: 5px;
   ${typography.H3};
   &:hover {
-  background-color: ${Color.Primary};
+    background-color: ${Color.Primary};
   }
-`
+`;

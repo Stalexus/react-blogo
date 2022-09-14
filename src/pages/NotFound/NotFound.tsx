@@ -1,7 +1,7 @@
-import { NotFoundImage } from '../../assets'
+import { NotFoundImage } from "../../assets";
 
 export const NotFound = () => {
   return (
     <NotFoundImage />
-  )
-}
+  );
+};

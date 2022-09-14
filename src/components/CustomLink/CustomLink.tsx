@@ -1,6 +1,6 @@
-import { ReactNode } from "react"
-import { Link, useMatch } from "react-router-dom"
-import { ROUTE } from "../../router/routes"
+import { ReactNode } from "react";
+import { Link, useMatch } from "react-router-dom";
+import { ROUTE } from "../../router/routes";
 
 interface IProps {
     children: ReactNode;
@@ -8,11 +8,11 @@ interface IProps {
 }
 
 export const CustomLink = ({ to, children }: IProps) => {
-    const isActive = useMatch(to);
+  const isActive = useMatch(to);
 
-    return (
-        <Link to={to} className={`${isActive && 'text-danger'}`}>
-            {children}
-        </Link>
-    )
-}
+  return (
+    <Link to={to} className={`${isActive && "text-danger"}`}>
+      {children}
+    </Link>
+  );
+};

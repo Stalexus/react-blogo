@@ -1,3 +1,3 @@
-import { SortButton } from './SortButton'
+import { SortButton } from "./SortButton";
 
-export { SortButton }
+export { SortButton };

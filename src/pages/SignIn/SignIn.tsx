@@ -1,8 +1,8 @@
-import { SignInForm } from "../../components/SignInForm"
-import { Title } from "../../components/Title"
-import { ROUTE } from "../../router/routes"
-import { HomeLink, StyledForm } from "../SignUp/styles"
-import { StyledSignIn } from "./styles"
+import { SignInForm } from "../../components/SignInForm";
+import { Title } from "../../components/Title";
+import { ROUTE } from "../../router/routes";
+import { HomeLink, StyledForm } from "../SignUp/styles";
+import { StyledSignIn } from "./styles";
 
 export const SignIn = () => {
   return (
@@ -13,5 +13,5 @@ export const SignIn = () => {
         <SignInForm />
       </StyledForm>
     </StyledSignIn>
-  )
-}
+  );
+};

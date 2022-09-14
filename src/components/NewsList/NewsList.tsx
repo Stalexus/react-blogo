@@ -1,8 +1,8 @@
-import { DotLoader } from 'react-spinners';
-import { IBlog } from '../../types'
-import { ErrorMassage, StyledContainer } from '../ArticleList/styles';
-import { NewsListItem } from '../NewsListItem';
-import { StyledNews } from './styles';
+import { DotLoader } from "react-spinners";
+import { IBlog } from "../../types";
+import { ErrorMassage, StyledContainer } from "../ArticleList/styles";
+import { NewsListItem } from "../NewsListItem";
+import { StyledNews } from "./styles";
 
 interface IProps {
     blogs: IBlog[];
@@ -11,25 +11,25 @@ interface IProps {
 }
 
 export const NewsList = ({ blogs, isLoading, errorMessage }: IProps) => {
-    if (isLoading) {
-        return (
-            <StyledContainer>
-                <DotLoader />
-            </StyledContainer>
-        );
-    }
-    if (errorMessage) {
-        return (
-            <StyledContainer>
-                <ErrorMassage>{errorMessage}</ErrorMassage>
-            </StyledContainer>
-        )
-    }
+  if (isLoading) {
     return (
-        <StyledNews>
-            {blogs.map(blog => {
-                return <NewsListItem blog={blog} key={blog.id} />
-            })}
-        </StyledNews>
-    )
-}
+      <StyledContainer>
+        <DotLoader />
+      </StyledContainer>
+    );
+  }
+  if (errorMessage) {
+    return (
+      <StyledContainer>
+        <ErrorMassage>{errorMessage}</ErrorMassage>
+      </StyledContainer>
+    );
+  }
+  return (
+    <StyledNews>
+      {blogs.map(blog => {
+        return <NewsListItem blog={blog} key={blog.id} />;
+      })}
+    </StyledNews>
+  );
+};

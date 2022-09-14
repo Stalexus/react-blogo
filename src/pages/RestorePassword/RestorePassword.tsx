@@ -1,5 +1,5 @@
 export const RestorePassword = () => {
   return (
-<div></div>
-  )
-}
+    <div></div>
+  );
+};

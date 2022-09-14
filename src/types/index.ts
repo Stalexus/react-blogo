@@ -31,7 +31,9 @@ export interface ILaunches {
 }
 
 export type RequestQueryParams = {
-    limit: string, page: string
+    limit: string;
+    page: string;
+    searchParams?: string;
 }
 
 export interface UserData {

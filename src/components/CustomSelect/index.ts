@@ -1,3 +1,3 @@
-import { CustomSelect } from './CustomSelect'
+import { CustomSelect } from "./CustomSelect";
 
-export { CustomSelect }
+export { CustomSelect };

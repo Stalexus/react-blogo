@@ -1,9 +1,9 @@
-import { StyledTitle } from "./styles"
+import { StyledTitle } from "./styles";
 
 interface IProps {
     text: string;
 }
 
 export const Title = ({ text }: IProps) => {
-    return <StyledTitle>{text}</StyledTitle>
-}
+  return <StyledTitle>{text}</StyledTitle>;
+};

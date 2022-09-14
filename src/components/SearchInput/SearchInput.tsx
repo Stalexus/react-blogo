@@ -11,14 +11,14 @@ interface IProps {
 }
 
 export const SearchInput = ({ placeholder, type, value, onChange, onBlur, error }: IProps) => {
-    return (
-        <StyledSearch
-            placeholder={placeholder}
-            type={type}
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
-            error={error}
-        />
-    );
+  return (
+    <StyledSearch
+      placeholder={placeholder}
+      type={type}
+      value={value}
+      onChange={onChange}
+      onBlur={onBlur}
+      error={error}
+    />
+  );
 };

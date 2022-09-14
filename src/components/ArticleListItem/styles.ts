@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components"
+import styled from "styled-components";
 import { Color } from "../../ui/colors";
 
 export const ArticleLink = styled(Link)`
@@ -16,7 +16,7 @@ export const Picture = styled.img`
   border-radius: 15px;
   opacity: 0.6;
   cursor: pointer;
-  :hover{
+  :hover {
     opacity: 1;
   }
 `;
@@ -28,6 +28,6 @@ export const PictureWrapper = styled.div`
 `;
 
 export const Description = styled.p`
-overflow: hidden;
-text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

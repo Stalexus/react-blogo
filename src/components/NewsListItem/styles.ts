@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const NewsLink = styled(Link)`
   display: flex;
@@ -15,7 +15,7 @@ export const Picture = styled.img`
   border-radius: 15px;
   opacity: 0.6;
   cursor: pointer;
-  :hover{
+  :hover {
     opacity: 1;
   }
 `;

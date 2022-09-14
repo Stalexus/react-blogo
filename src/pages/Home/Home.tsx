@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { ArticleList } from "../../components/ArticleList"
-import { CustomSelect } from "../../components/CustomSelect"
-import { Title } from "../../components/Title"
-import { ROUTE } from "../../router/routes"
-import { fetchArticles } from "../../store/features/articlesSlice"
-import { useAppDispatch, useAppSelector } from "../../store/hooks"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { ArticlesList } from "../../components/ArticleList";
+import { CustomSelect } from "../../components/CustomSelect";
+import { Title } from "../../components/Title";
+import { ROUTE } from "../../router/routes";
+import { fetchArticles } from "../../store/features/articlesSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   ArticleLink,
   ButtonContainer,
@@ -17,14 +17,14 @@ import {
   SortWeek,
   SortYear,
   StyledHome
-} from "./styles"
+} from "./styles";
 
 export const Home = () => {
 
   const dispatch = useAppDispatch();
   const { results, isLoading, error } = useAppSelector(({ articles }) => articles);
-  const { page = '' } = useParams();
-  const [limit, setLimit] = useState('9');
+  const { page = "" } = useParams();
+  const [limit] = useState("12");
 
   useEffect(() => {
     dispatch(fetchArticles({ limit, page }));
@@ -46,7 +46,7 @@ export const Home = () => {
         </ButtonContainer>
         <CustomSelect />
       </SortContainer>
-      <ArticleList articles={results} isLoading={isLoading} errorMessage={error} />
+      <ArticlesList articles={results} isLoading={isLoading} errorMessage={error} />
     </StyledHome>
-  )
-}
+  );
+};
